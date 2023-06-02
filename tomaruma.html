@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>we?</title>
+<style>
+        body {
+            background-color: purple;
+            overflow: hidden;
+        }
+        h1{
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+        .center{
+            display: flex;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+            height: 30vh;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            margin: 0 20px;
+            color: #000;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        .img{
+            display: block;
+            background-image: url('https://img.freepik.com/vetores-gratis/ilustracao-festa-junina-com-placa-de-madeira-vintage-e-lanterna-de-papel-brasil-junho-sao-joao-festival_1314-3328.jpg?w=2000');
+            background-size: cover;
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            border-radius: 50%;
+        }
+</style>
+</head>
+<body>
+<div class="center">
+<h1>Animados para o Arraia dos Bãos?</h1>
+</div>
+<div class="img"></div>
+<div class="btn">
+<button id="sim" onclick="openLink('https://youtu.be/XzaJWAL2Ks4?t=3')">Sim</button>
+<button id="nao">Não</button>
+</div>
+<script>
+        function openLink(url) {
+            window.open(url, "_blank");
+        }
+
+ 
+
+        const naoBtn = document.querySelector('#nao');
+        const simBtn = document.querySelector('#sim');
+        const img = document.querySelector('.img');
+
+ 
+
+ 
+
+        simBtn.addEventListener('mouseover', ()=>{
+            img.style.backgroundImage = "url('https://img.freepik.com/vetores-gratis/ilustracao-festa-junina-com-placa-de-madeira-vintage-e-lanterna-de-papel-brasil-junho-sao-joao-festival_1314-3328.jpg?w=2000')";
+        });
+        simBtn.addEventListener('mouseout', ()=>{
+            img.style.backgroundImage = "url('https://img.freepik.com/vetores-gratis/ilustracao-festa-junina-com-placa-de-madeira-vintage-e-lanterna-de-papel-brasil-junho-sao-joao-festival_1314-3328.jpg?w=2000')";
+        });
+        naoBtn.addEventListener('mouseover', ()=>{
+            naoBtn.style.position = 'absolute';
+            naoBtn.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+            naoBtn.style.top = Math.floor(Math.random() * window.innerHeight) + "px"; 
+        });
+</script>
+</body>
+</html>
